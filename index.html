@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+            background-image: url(background.jpg);
+            background-size: cover;
+        }
+        .box{
+            height: 50%;
+            width: 40%;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            background: rgba(0, 0, 0, 0.7);
+            box-sizing: border-box;
+            box-shadow: 0,15px,25px,rgba(0, 0, 0, 0.6);
+            border-radius: 10px;
+        }
+        .box h1{
+            margin: 0 0 30px;
+            padding: 0;
+            color: white;
+            text-align: center;
+            padding-top: 25px;
+        }
+        .box .inputbox{
+            position: relative;
+        }
+        .box .inputbox input{
+           width: 90%;
+           padding: 10px 0;
+           font-size: 16px;
+           color: #ffff;
+           margin-bottom: 30px;
+           border: none;
+           outline: none;
+           background: transparent;
+           padding-left: 40px;
+        }
+        .box .inputbox label{
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 10px 0;
+           font-size: 16px;
+           color: #ffff;
+           padding-left: 40px;
+           pointer-events: none;
+           transition: 0.5s;
+        }
+        .box .inputbox input:focus ~ label,.box .inputbox input:valid ~ label{
+            top: -25px;
+            left: 0;
+            color: white;
+            font-size: 12px;
+        }
+        
+        .box input[type="submit"]{
+            background:transparent;
+            border: none;
+            outline: none;
+            color: white;
+            position: absolute;
+            margin-top: 20px;
+            left: 45%;
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+    <h1>Login</h1>
+    <form action="submit.php">
+        <div class="inputbox">
+            <input type="text" required>
+            <label for="">Username</label>
+        </div>
+        <div class="inputbox">
+            <input type="text" required>
+            <label for="">Password</label>
+        </div>
+        <div>
+            <input type="submit">
+        </div>
+    </form>
+</div>
+</body>
+</html>
